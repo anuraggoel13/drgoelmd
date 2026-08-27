@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Goel, MD | Psychiatrist | Long Beach</title>
+<meta name="description" content="Dr. Goel, MD — Double Board-Certified Psychiatrist serving adults with serious mental illness in Long Beach and throughout Los Angeles County. Medi-Cal accepted.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #1a2744;
+    --gold: #b8975a;
+    --gold-light: #d4b07a;
+    --white: #ffffff;
+    --off-white: #f8f7f4;
+    --text-medium: #4a4a4a;
+    --border: #e0dbd4;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #1a1a1a;
+    background: var(--white);
+    line-height: 1.7;
+  }
+
+  /* NAVIGATION */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(26, 39, 68, 0.97);
+    backdrop-filter: blur(8px);
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    border-bottom: 1px solid rgba(184,151,90,0.3);
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .nav-brand span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+
+  /* HERO + ABOUT combined navy section */
+  .hero-about {
+    background: var(--navy);
+    padding: 140px 48px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-about::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(184,151,90,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-about-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HERO PART */
+  .hero-eyebrow {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .hero-eyebrow::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.05;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-credential {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+  }
+
+  .hero-location {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 6px;
+  }
+
+  .hero-virtual {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 64px;
+  }
+
+  /* ABOUT PART — inside same navy section */
+  .about-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(184,151,90,0.4);
+    margin-bottom: 48px;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+    line-height: 1.85;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .about-sidebar {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,151,90,0.2);
+    padding: 40px;
+    position: sticky;
+    top: 88px;
+  }
+
+  .sidebar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 24px;
+    letter-spacing: 0.04em;
+  }
+
+  .sidebar-list { list-style: none; }
+
+  .sidebar-list li {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sidebar-list li:last-child { border-bottom: none; }
+
+  .sidebar-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* QUOTE */
+  .quote-section {
+    background: #e0d8c8;
+    padding: 80px 48px;
+  }
+
+  .quote-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .quote-rule {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 28px auto 0;
+  }
+
+  /* SERVICES */
+  #services {
+    background: var(--navy);
+    padding: 100px 48px;
+  }
+
+  #services .section-eyebrow { color: var(--gold); }
+
+  .section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+    display: inline-block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+  }
+
+  #services .section-title { color: var(--white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .service-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,151,90,0.2);
+    padding: 40px;
+    transition: background 0.2s;
+  }
+
+  .service-card:hover { background: rgba(255,255,255,0.08); }
+
+  .service-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+
+  .service-desc {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+  }
+
+  .services-note {
+    margin-top: 16px;
+    margin-left: -48px;
+    margin-right: -48px;
+    padding: 32px 48px;
+    background: #e0d8c8;
+  }
+
+  .services-note-text {
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+
+  .services-note-text strong {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--navy);
+    padding: 100px 48px;
+  }
+
+  #contact .section-title { color: var(--white); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 48px;
+  }
+
+  .contact-info { display: flex; flex-direction: column; gap: 32px; }
+
+  .contact-item { display: flex; flex-direction: column; gap: 6px; }
+
+  .contact-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .contact-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-value:hover { color: var(--gold-light); }
+
+  .contact-sub {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 2px;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+
+  .form-label {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .form-input {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 12px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-input::placeholder { color: rgba(255,255,255,0.25); }
+  .form-input:focus { border-color: var(--gold); }
+  textarea.form-input { resize: vertical; min-height: 100px; }
+
+  .form-submit {
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+
+  .form-submit:hover { background: var(--gold-light); }
+
+  /* EMERGENCY */
+  .emergency-bar {
+    background: #8b1a1a;
+    padding: 16px 48px;
+    text-align: center;
+  }
+
+  .emergency-bar p { font-size: 0.8rem; color: rgba(255,255,255,0.9); }
+  .emergency-bar strong { color: var(--white); font-weight: 500; }
+
+  /* FOOTER */
+  footer {
+    background: #0f1829;
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(184,151,90,0.15);
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-brand span { color: var(--gold); }
+
+  .footer-copy {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.08em;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 0 24px; }
+    .nav-links { display: none; }
+    .hero-about { padding: 100px 24px 72px; }
+    #services, #contact, .quote-section { padding: 72px 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-sidebar { position: static; }
+    .services-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
+    .emergency-bar { padding: 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO + ABOUT — single navy section -->
+<div class="hero-about">
+  <div class="hero-about-inner">
+
+    <!-- Hero part -->
+    <div class="hero-eyebrow">Double Board-Certified Psychiatrist &nbsp;·&nbsp; LA County</div>
+    <h1 class="hero-title">Dr. Goel, MD</h1>
+    <p class="hero-location">In-person appointments available in Long Beach</p>
+    <p class="hero-location">Virtual appointments available throughout Los Angeles County</p>
+    <p class="hero-location">Accepting Los Angeles County Medi-Cal</p>
+
+    <!-- Full gold line -->
+    <div style="width:100%; height:1px; background:var(--gold); margin: 48px 0;"></div>
+
+    <!-- About part -->
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Dr. Anurag (Ari) Goel is a double board-certified psychiatrist with over 15 years of experience providing compassionate, expert psychiatric care to adults with serious mental illness in the Los Angeles area.
+        </p>
+        <p>
+          Dr. Goel specializes in the treatment of schizophrenia, schizoaffective disorder, severe bipolar disorder, and severe major depression — including patients experiencing homelessness or housing instability.
+        </p>
+        <p>
+          He provides in-person community psychiatric services at the Long Beach Multi-Service Center. He also offers virtual and telephone appointments for patients throughout all of Los Angeles County.
+        </p>
+      </div>
+      <div class="about-sidebar">
+        <div class="sidebar-title">Conditions Treated</div>
+        <ul class="sidebar-list">
+          <li>Schizophrenia</li>
+          <li>Schizoaffective Disorder</li>
+          <li>Severe Bipolar Disorder</li>
+          <li>Severe Major Depression</li>
+          <li>Post-Hospitalization Follow-Up</li>
+        </ul>
+        <div class="sidebar-title" style="margin-top:32px;">Access</div>
+        <ul class="sidebar-list">
+          <li>Los Angeles County Medi-Cal Accepted</li>
+          <li>In-Person — Long Beach Multi-Service Center<br><span style="font-size:0.82rem; font-weight:500; opacity:0.85;">— 1301 W 12th St, Long Beach CA 90813</span></li>
+          <li>Virtual or Telephone — All LA County</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <div class="quote-inner">
+    <p class="quote-text">Every person — regardless of their circumstances — deserves consistent, dignified, and expert psychiatric care.</p>
+    <div class="quote-rule"></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-title">Psychiatric Care</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-name">Psychiatric Evaluation</div>
+        <p class="service-desc">Comprehensive initial evaluation including diagnostic assessment, mental status examination, and individualized treatment planning.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-name">Medication Management</div>
+        <p class="service-desc">Expert psychopharmacology for adults with serious mental illness — antipsychotics, mood stabilizers, antidepressants, and evidence-based medication management.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREAM DIVIDER -->
+<div style="background:#e0d8c8; padding: 16px 48px; text-align:center;">
+  <div style="width:40px; height:1px; background:#b8975a; margin:0 auto;"></div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold);">Contact</div>
+    <h2 class="section-title">Schedule an Appointment</h2>
+    <div style="background:#e0d8c8; padding:24px 32px; margin-bottom:32px;">
+      <p style="font-size:0.95rem; color:#1a1a1a; line-height:1.8;">
+        To schedule an appointment, please email <strong>admin@psychiatricexcellence.com</strong> or complete the form below. You may also leave a voicemail at <strong>(415) 729-7294</strong> and our office will follow up within one business day.
+      </p>
+    </div>
+    <div class="contact-grid" style="grid-template-columns: 1fr;">
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xeaqjype" method="POST">
+        <div class="form-group">
+          <label class="form-label">Your Name *</label>
+          <input type="text" class="form-input" placeholder="Full name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number *</label>
+          <input type="tel" class="form-input" placeholder="Best number to reach you" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Medi-Cal ID Number (if available)</label>
+          <input type="text" class="form-input" placeholder="Optional">
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+        <p style="font-size:0.7rem; color:rgba(255,255,255,0.3); margin-top:8px; line-height:1.6;">* Required fields. This form is for appointment inquiries only and is not monitored for emergencies.</p>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY -->
+<div class="emergency-bar">
+  <p>
+    <strong>Psychiatric Emergency?</strong> Call <strong>911</strong> or call/text <strong>988</strong> (Suicide & Crisis Lifeline) — available 24/7. This website is not a crisis service.
+  </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Dr. Goel, MD · Psychiatric Excellence</div>
+  <div class="footer-copy">© 2026 Anurag Goel MD · drgoelmd.com</div>
+</footer>
+
+</body>
+</html>
