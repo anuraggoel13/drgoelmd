@@ -620,33 +620,37 @@
 <section id="contact">
   <div class="section-inner">
     <div class="section-eyebrow" style="color:var(--gold);">Contact</div>
-    <h2 class="section-title">Schedule an Appointment</h2>
+      <h2 class="section-title">Facility Inquiries</h2>
     <div style="background:#e0d8c8; padding:24px 32px; margin-bottom:32px;">
       <p style="font-size:0.95rem; color:#1a1a1a; line-height:1.8;">
-        To schedule an appointment, please email <strong>admin@psychiatricexcellence.com</strong> or complete the form below. You may also leave a voicemail at <strong>(415) 729-7294</strong> and our office will follow up within one business day.
+        For inquiries regarding psychiatric services at your facility, please complete the form below or email <strong>admin@psychiatricexcellence.com</strong> directly. You may also reach us by fax at <strong>415-854-9551</strong>.
       </p>
     </div>
     <div class="contact-grid" style="grid-template-columns: 1fr;">
       <div class="contact-form">
         <form action="https://formspree.io/f/xeaqjype" method="POST">
         <div class="form-group">
-          <label class="form-label">Your Name *</label>
-          <input type="text" name="name" class="form-input" placeholder="Full name" required>
+          <label class="form-label">Facility Name *</label>
+          <input type="text" name="facility" class="form-input" placeholder="Name of facility" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Contact Person Name & Title *</label>
+          <input type="text" name="name" class="form-input" placeholder="e.g. Jane Smith, Director of Nursing" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
         </div>
         <div class="form-group">
           <label class="form-label">Phone Number *</label>
           <input type="tel" name="phone" class="form-input" placeholder="Best number to reach you" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input type="email" name="email" class="form-input" placeholder="your@email.com">
+          <label class="form-label">Message</label>
+          <textarea name="message" class="form-input" placeholder="Any additional context (optional)"></textarea>
         </div>
-        <div class="form-group">
-          <label class="form-label">Medi-Cal ID Number (if available)</label>
-          <input type="text" name="medi-cal-id" class="form-input" placeholder="Optional">
-        </div>
-        <button type="submit" class="form-submit">Send Message →</button>
-        <p style="font-size:0.7rem; color:rgba(255,255,255,0.3); margin-top:8px; line-height:1.6;">* Required fields. This form is for appointment inquiries only and is not monitored for emergencies.</p>
+        <button type="submit" class="form-submit">Submit Inquiry →</button>
+        <p style="font-size:0.7rem; color:rgba(255,255,255,0.3); margin-top:8px; line-height:1.6;">* Required fields.</p>
         </form>
       </div>
       </div>
